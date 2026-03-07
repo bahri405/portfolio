@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samsul Bahri | Luxury Portfolio</title>
+
+    <meta name="description" content="Portfolio Samsul Bahri - Web Developer specializing in Laravel, MySQL, and scalable backend systems.">
+    <meta name="keywords" content="Web Developer, Laravel Developer, PHP Developer, Backend Developer, Portfolio">
+    <meta name="author" content="Samsul Bahri">
+
+    <meta property="og:title" content="Samsul Bahri | Web Developer">
+    <meta property="og:description" content="Backend Developer specializing in Laravel and scalable systems.">
+    <meta property="og:image" content="https://padukarya.com/uploads/teams/team-20251008161238.png">
+    <meta property="og:type" content="website">
+
+    <title>Samsul Bahri | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,6 +22,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
     <script>
         tailwind.config = {
             theme: {
@@ -34,6 +46,12 @@
         
         html {
             scroll-behavior: smooth;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                cursor: none;
+            }
         }
 
         /* Tambahkan padding-top pada section agar tidak tertutup header fixed */
@@ -61,8 +79,12 @@
         }
 
         .text-behind {
-            position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);
+            position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%);
             z-index: 0; white-space: nowrap; pointer-events: none;
+        }
+
+        @media (min-width: 768px) {
+            .text-behind { top: 40%; }
         }
 
         .text-outline-luxury {
@@ -138,6 +160,45 @@
             background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 999px;
         }
+
+        /* Styling WhatsApp Floating Button */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99; /* Pastikan di atas elemen lain */
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            border-radius: 999px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 10px 40px rgba(45, 212, 191, 0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .wa-float:hover {
+            transform: translateY(-8px) scale(1.05);
+            background: #2DD4BF;
+            color: #0F172A;
+            box-shadow: 0 15px 50px rgba(45, 212, 191, 0.5);
+            border-color: #2DD4BF;
+        }
+
+        .wa-icon {
+            font-size: 24px;
+        }
+
+        .wa-text {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
     </style>
     <style>
         .modal-overlay {
@@ -162,7 +223,6 @@
                 <span class="font-semibold tracking-[0.3em] text-[10px] opacity-80">BAHRI</span>
             </div>
             <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.2em]">
-                <!-- <a href="#" class="text-primary">Home</a> -->
                 <a href="#about" class="hover:text-primary transition">About</a>
                 <a href="#works" class="hover:text-primary transition">Works</a>
             </div>
@@ -200,7 +260,7 @@
                     <a href="#works" class="bg-primary text-darkBg px-6 py-3 rounded-full font-bold text-[10px] tracking-widest hover:bg-white transition duration-300 shadow-xl">
                         PORTFOLIO ↗
                     </a>
-                    <a href="https://wa.me/086714416493" class="px-6 py-3 rounded-full font-bold text-[10px] tracking-widest text-white hover:bg-white/10 transition duration-300">
+                    <a href="https://wa.me/6285714416493" class="px-6 py-3 rounded-full font-bold text-[10px] tracking-widest text-white hover:bg-white/10 transition duration-300">
                         HIRE ME
                     </a>
                 </div>
@@ -387,7 +447,7 @@
                             <div onclick="openModal('modal-klik-pangku')" class="relative overflow-hidden rounded-2xl border border-white/10 aspect-video bg-cardBg cursor-pointer">
                                     <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
                                     
-                                    <img src="assets/klik-pangku/klik-pangku.png" alt="KlikPangku" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                                    <img src="assets/klik-pangku/klik-pangku.png" alt="Aplikasi Pemesanan Makanan" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                                     
                                     <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
                                         <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
@@ -427,7 +487,7 @@
                         <div onclick="openModal('modal-pasaka')" class="relative overflow-hidden rounded-2xl border border-white/10 aspect-video bg-cardBg cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
                                 
-                                <img src="assets/pasaka/pasaka.png" alt="pasaka company profile" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                                <img src="assets/pasaka/pasaka.png" alt="pasakarievansmith" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                                 
                                 <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
                                     <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
@@ -475,7 +535,7 @@
                 </div>
 
                 <div class="group relative inline-block mb-20" data-aos="zoom-in" data-aos-delay="200">
-                    <a href="mailto:bahrisamsul274@gmail.com" class="font-luxury text-3xl md:text-5xl text-white/80 hover:text-primary transition-all duration-500 tracking-tighter">
+                    <a href="mailto:bahrisamsul274@gmail.com" class="font-luxury text-2xl md:text-5xl text-white/80 hover:text-primary transition-all duration-500 tracking-tighter">
                         bahrisamsul274@gmail.com
                     </a>
                     <div class="w-0 group-hover:w-full h-[1px] bg-primary transition-all duration-500 mt-2 mx-auto"></div>
@@ -511,7 +571,7 @@
         </footer>
 
         <!-- modal box -->
-        <div id="modal-lpk" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
+        <!-- <div id="modal-lpk" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
             <div class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 <button onclick="closeModal('modal-lpk')" class="absolute top-5 right-5 z-[110] w-10 h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
                     <i class="fa-solid fa-xmark"></i>
@@ -521,14 +581,13 @@
                     <div class="md:col-span-2 h-[300px] md:h-[500px] bg-black">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="assets/lpk/lpk-3.png" class="w-full h-full object-cover"></div>
-                                <!-- <div class="swiper-slide"><img src="assets/lpk/dashboard.png" class="w-full h-full object-cover"></div> -->
-                                <div class="swiper-slide"><img src="assets/lpk/manajement-siswa.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/riwayat-interview.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/form-penilaian.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/penempatan-siswa.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/add-persiapan-keberangkatan.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/analitic.png" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="assets/lpk/lpk-3.png" class="w-full h-full object-cover" alt="lembaga pelatihan kerja"></div>
+                                <div class="swiper-slide"><img src="assets/lpk/manajement-siswa.png" class="w-full h-full object-cover" alt="manajemen siswa"></div>
+                                <div class="swiper-slide"><img src="assets/lpk/riwayat-interview.png" class="w-full h-full object-cover" alt="riwayat interview"></div>
+                                <div class="swiper-slide"><img src="assets/lpk/form-penilaian.png" class="w-full h-full object-cover" alt="form penilaian"></div>
+                                <div class="swiper-slide"><img src="assets/lpk/penempatan-siswa.png" class="w-full h-full object-cover" alt="penempatan siswa"></div>
+                                <div class="swiper-slide"><img src="assets/lpk/add-persiapan-keberangkatan.png" class="w-full h-full object-cover" alt="keberangakatan jepang"></div>
+                                <div class="swiper-slide"><img src="assets/lpk/analitic.png" class="w-full h-full object-cover" alt="analitik"></div>
                             </div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
@@ -558,40 +617,165 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div id="modal-inventori" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
-            <div class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <button onclick="closeModal('modal-inventori')" class="absolute top-5 right-5 z-[110] w-10 h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
+        <!-- modal box -->
+        <div id="modal-lpk" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto">
+
+            <div class="relative w-full max-w-5xl bg-cardBg rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+
+                <!-- CLOSE BUTTON -->
+                <button onclick="closeModal('modal-lpk')" 
+                    class="absolute top-3 right-3 md:top-5 md:right-5 z-[110] w-9 h-9 md:w-10 md:h-10 bg-darkBg/60 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
 
-                <div class="grid md:grid-cols-3">
-                    <div class="md:col-span-2 h-[300px] md:h-[500px] bg-black">
-                        <div class="swiper mySwiper">
+                <!-- GRID -->
+                <div class="grid grid-cols-1 md:grid-cols-3">
+
+                    <!-- IMAGE SLIDER -->
+                    <div class="md:col-span-2 h-[220px] sm:h-[260px] md:h-[500px] bg-black">
+
+                        <div class="swiper mySwiper h-full">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="assets/inventori/inv-1.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/inventori/3.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/inventori/4.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/inventori/1.png" class="w-full h-full object-cover"></div>
-                                
+
+                                <div class="swiper-slide">
+                                    <img src="assets/lpk/lpk-3.png" class="w-full h-full object-cover" alt="lembaga pelatihan kerja">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/lpk/manajement-siswa.png" class="w-full h-full object-cover" alt="manajemen siswa">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/lpk/riwayat-interview.png" class="w-full h-full object-cover" alt="riwayat interview">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/lpk/form-penilaian.png" class="w-full h-full object-cover" alt="form penilaian">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/lpk/penempatan-siswa.png" class="w-full h-full object-cover" alt="penempatan siswa">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/lpk/add-persiapan-keberangkatan.png" class="w-full h-full object-cover" alt="keberangkatan jepang">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/lpk/analitic.png" class="w-full h-full object-cover" alt="analitik">
+                                </div>
+
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+
+                            <div class="swiper-button-next hidden md:flex"></div>
+                            <div class="swiper-button-prev hidden md:flex"></div>
                             <div class="swiper-pagination"></div>
                         </div>
+
                     </div>
 
-                    <div class="p-8 space-y-4">
-                        <h3 class="font-serif text-2xl italic text-white">Project Insights</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed">
+                    <!-- CONTENT -->
+                    <div class="p-5 md:p-8 space-y-4">
+
+                        <h3 class="font-serif text-xl md:text-2xl italic text-white">
+                            Project Insights
+                        </h3>
+
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">
+                            Platform manajemen berbasis web yang dirancang untuk membantu Lembaga Pelatihan Kerja (LPK) 
+                            dalam mengelola seluruh siklus data peserta, mulai dari pendaftaran, proses interview, 
+                            pengelompokan batch, hingga monitoring penempatan kerja. Sistem ini dilengkapi dashboard 
+                            analitik untuk menampilkan statistik dan insight secara real-time guna mendukung 
+                            pengambilan keputusan yang lebih efektif.
+                        </p>
+
+                        <div class="pt-4">
+                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">
+                                Key Features
+                            </p>
+
+                            <ul class="text-[11px] md:text-xs text-gray-300 space-y-2">
+                                <li>• Multi-role Authentication & Access Control</li>
+                                <li>• Student & Sending Organization Management</li>
+                                <li>• Interview Process Tracking</li>
+                                <li>• Batch Grouping & Placement Monitoring</li>
+                                <li>• Real-time Analytics Dashboard</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="modal-inventori" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto bg-black/60">
+
+            <div onclick="event.stopPropagation()" class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl max-h-[90vh]">
+
+                <!-- CLOSE BUTTON -->
+                <button onclick="closeModal('modal-inventori')" 
+                    class="absolute top-3 right-3 md:top-5 md:right-5 z-[110] w-9 h-9 md:w-10 md:h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="grid grid-cols-1 md:grid-cols-3">
+
+                    <!-- SLIDER -->
+                    <div class="md:col-span-2 h-[220px] sm:h-[260px] md:h-[500px] bg-black">
+
+                        <div class="swiper mySwiper h-full">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <img src="assets/inventori/inv-1.png" class="w-full h-full object-cover" alt="inventori">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/inventori/3.png" class="w-full h-full object-cover" alt="inventori">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/inventori/4.png" class="w-full h-full object-cover" alt="inventori">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/inventori/1.png" class="w-full h-full object-cover" alt="inventori">
+                                </div>
+
+                            </div>
+
+                            <div class="swiper-button-next hidden md:flex"></div>
+                            <div class="swiper-button-prev hidden md:flex"></div>
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CONTENT -->
+                    <div class="p-5 md:p-8 space-y-4 overflow-y-auto">
+
+                        <h3 class="font-serif text-xl md:text-2xl italic text-white">
+                            Project Insights
+                        </h3>
+
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">
                             Sistem informasi inventaris yang dirancang untuk mengelola persediaan alat kerja secara terstruktur dan efisien. 
                             Aplikasi ini membantu tim dalam memantau stok, mengelola peminjaman, serta menghasilkan laporan persediaan 
                             secara otomatis untuk mendukung pengelolaan aset yang lebih terorganisir.
                         </p>
+
                         <div class="pt-4">
-                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">Key Features</p>
-                            <ul class="text-[11px] text-gray-300 space-y-2">
+                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">
+                                Key Features
+                            </p>
+
+                            <ul class="text-[11px] md:text-xs text-gray-300 space-y-2">
                                 <li>• Serial Number Tracking for Asset Identification</li>
                                 <li>• Multi-level User Access (Warehouse & Maintenance Staff)</li>
                                 <li>• Inventory Stock Monitoring (Incoming & Outgoing Items)</li>
@@ -599,12 +783,16 @@
                                 <li>• Automated Stock Reporting (PDF / Excel)</li>
                             </ul>
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
 
-        <div id="modal-klik-pangku" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
+        <!-- <div id="modal-klik-pangku" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
             <div class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 <button onclick="closeModal('modal-klik-pangku')" class="absolute top-5 right-5 z-[110] w-10 h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
                     <i class="fa-solid fa-xmark"></i>
@@ -614,10 +802,10 @@
                     <div class="md:col-span-2 h-[300px] md:h-[500px] bg-black">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="assets/klik-pangku/2.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/klik-pangku/5.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/klik-pangku/4.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/klik-pangku/1.png" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="assets/klik-pangku/2.png" class="w-full h-full object-cover" alt="aplikasi klik pangku"></div>
+                                <div class="swiper-slide"><img src="assets/klik-pangku/5.png" class="w-full h-full object-cover" alt="aplikasi klik pangku"></div>
+                                <div class="swiper-slide"><img src="assets/klik-pangku/4.png" class="w-full h-full object-cover" alt="aplikasi klik pangku"></div>
+                                <div class="swiper-slide"><img src="assets/klik-pangku/1.png" class="w-full h-full object-cover" alt="aplikasi klik pangku"></div>
                                 
                             </div>
                             <div class="swiper-button-next"></div>
@@ -645,9 +833,169 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <div id="modal-klik-pangku" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto bg-black/60">
+
+            <div onclick="event.stopPropagation()" class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl max-h-[90vh]">
+
+                <!-- CLOSE BUTTON -->
+                <button onclick="closeModal('modal-klik-pangku')" 
+                    class="absolute top-3 right-3 md:top-5 md:right-5 z-[110] w-9 h-9 md:w-10 md:h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="grid grid-cols-1 md:grid-cols-3">
+
+                    <!-- SLIDER -->
+                    <div class="md:col-span-2 h-[220px] sm:h-[260px] md:h-[500px] bg-black">
+
+                        <div class="swiper mySwiper h-full">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <img src="assets/klik-pangku/2.png" class="w-full h-full object-cover" alt="aplikasi klik pangku">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/klik-pangku/5.png" class="w-full h-full object-cover" alt="aplikasi klik pangku">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/klik-pangku/4.png" class="w-full h-full object-cover" alt="aplikasi klik pangku">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/klik-pangku/1.png" class="w-full h-full object-cover" alt="aplikasi klik pangku">
+                                </div>
+
+                            </div>
+
+                            <div class="swiper-button-next hidden md:flex"></div>
+                            <div class="swiper-button-prev hidden md:flex"></div>
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CONTENT -->
+                    <div class="p-5 md:p-8 space-y-4 overflow-y-auto">
+
+                        <h3 class="font-serif text-xl md:text-2xl italic text-white">
+                            Project Insights
+                        </h3>
+
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">
+                            Sistem pemesanan makanan berbasis web yang dirancang untuk memberikan pengalaman order yang cepat, praktis, dan modern. 
+                            Terintegrasi dengan payment gateway serta notifikasi real-time untuk mempercepat proses pemesanan hingga penyajian.
+                        </p>
+
+                        <div class="pt-4">
+                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">
+                                Key Features
+                            </p>
+
+                            <ul class="text-[11px] md:text-xs text-gray-300 space-y-2">
+                                <li>• Dynamic Food & Beverage Menu</li>
+                                <li>• Shopping Cart & Order Management</li>
+                                <li>• Midtrans Payment Gateway Integration</li>
+                                <li>• Real-time Order Notifications (Socket.io & Redis)</li>
+                                <li>• Admin Dashboard for Menu & Order Management</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        <div id="modal-pasaka" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
+        <div id="modal-pasaka" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto bg-black/60">
+
+            
+            <div onclick="event.stopPropagation()" class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl max-h-[90vh]">
+
+                <!-- CLOSE BUTTON -->
+                <button onclick="closeModal('modal-pasaka')" 
+                    class="absolute top-3 right-3 md:top-5 md:right-5 z-[110] w-9 h-9 md:w-10 md:h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="grid grid-cols-1 md:grid-cols-3">
+
+                    <!-- SLIDER -->
+                    <div class="md:col-span-2 h-[220px] sm:h-[260px] md:h-[500px] bg-black">
+
+                        <div class="swiper mySwiper h-full">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <img src="assets/pasaka/pasaka-3.png" class="w-full h-full object-cover" alt="company profile">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/pasaka/pasaka-2.png" class="w-full h-full object-cover" alt="company profile">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/pasaka/pasaka-1.png" class="w-full h-full object-cover" alt="company profile">
+                                </div>
+
+                            </div>
+
+                            <div class="swiper-button-next hidden md:flex"></div>
+                            <div class="swiper-button-prev hidden md:flex"></div>
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CONTENT -->
+                    <div class="p-5 md:p-8 space-y-4 overflow-y-auto">
+
+                        <h3 class="font-serif text-xl md:text-2xl italic text-white">
+                            Project Insights
+                        </h3>
+
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">
+                            Website company profile yang dirancang untuk memperkuat citra profesional 
+                            Pasaka Rievans & Smith sebagai firma hukum modern. Platform ini menyajikan 
+                            informasi tentang profil firma, tim advokat, layanan hukum, serta publikasi 
+                            artikel legal dalam tampilan yang elegan, responsif, dan mudah diakses oleh 
+                            calon klien. Sistem ini juga dilengkapi dengan panel admin untuk mengelola 
+                            konten secara dinamis serta fitur konsultasi online untuk mempermudah 
+                            komunikasi dengan klien.
+                        </p>
+
+                        <div class="pt-4">
+                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">
+                                Key Features
+                            </p>
+
+                            <ul class="text-[11px] md:text-xs text-gray-300 space-y-2">
+                                <li>• Professional Firm & Legal Team Profile</li>
+                                <li>• Admin Panel for Content & Team Management</li>
+                                <li>• Responsive & SEO-friendly Website Structure</li>
+                                <li>• Legal Services Showcase (Corporate Law, Litigation, Legal Audit)</li>
+                                <li>• Legal Articles & Publications Management</li>
+                                <li>• Online Consultation & Appointment Booking</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+            </div>
+
+
+        <!-- <div id="modal-pasaka" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
             <div class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 <button onclick="closeModal('modal-pasaka')" class="absolute top-5 right-5 z-[110] w-10 h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
                     <i class="fa-solid fa-xmark"></i>
@@ -657,9 +1005,9 @@
                     <div class="md:col-span-2 h-[300px] md:h-[500px] bg-black">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="assets/pasaka/pasaka-3.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/pasaka/pasaka-2.png" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="assets/pasaka/pasaka-1.png" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="assets/pasaka/pasaka-3.png" class="w-full h-full object-cover" alt="company profile"></div>
+                                <div class="swiper-slide"><img src="assets/pasaka/pasaka-2.png" class="w-full h-full object-cover" alt="company profile"></div>
+                                <div class="swiper-slide"><img src="assets/pasaka/pasaka-1.png" class="w-full h-full object-cover" alt="company profile"></div>
                                 
                                 
                             </div>
@@ -696,7 +1044,27 @@
                     
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <a href="https://wa.me/6285714416493?text=Halo%20Samsul,%20saya%20ingin%20berkonsultasi%20mengenai%20project%20web" 
+            target="_blank" 
+            class="wa-float group" 
+            data-aos="fade-left" 
+            data-aos-delay="1000">
+                
+                <div class="wa-text hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    Let's Talk
+                </div>
+                
+                <div class="flex items-center justify-center">
+                    <i class="fa-brands fa-whatsapp wa-icon"></i>
+                </div>
+                
+                <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                </span>
+            </a>
 
         <script>
             // Parallax khusus untuk foto agar gerakannya lebih smooth dan terasa 'keluar' dari arch
