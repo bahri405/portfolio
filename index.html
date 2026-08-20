@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -21,10 +21,6 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    
     <script>
         tailwind.config = {
             theme: {
@@ -201,16 +197,6 @@
             text-transform: uppercase;
         }
     </style>
-    <style>
-        .modal-overlay {
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(10px);
-            display: none; /* Hidden by default */
-        }
-        .modal-active { display: flex !important; }
-        .swiper { width: 100%; height: 100%; border-radius: 12px; }
-        .swiper-button-next, .swiper-button-prev { color: #2DD4BF !important; }
-    </style>
 </head>
 <body class="antialiased">
 
@@ -259,7 +245,7 @@
                 
                 <div class="btn-wrap">
                     <a href="#works" class="bg-primary text-darkBg px-6 py-3 rounded-full font-bold text-[10px] tracking-widest hover:bg-white transition duration-300 shadow-xl">
-                        PORTFOLIO ↗
+                        PORTFOLIO Γåù
                     </a>
                     <a href="https://wa.me/6285714416493" class="px-6 py-3 rounded-full font-bold text-[10px] tracking-widest text-white hover:bg-white/10 transition duration-300">
                         HIRE ME
@@ -270,7 +256,7 @@
 
         <div class="pb-24 md:text-right flex flex-col items-end" data-aos="fade-left">
             <div class="mb-6 flex flex-col items-end">
-                <div class="flex gap-1 text-primary mb-2 text-xs">★★★★★</div>
+                <div class="flex gap-1 text-primary mb-2 text-xs">ΓÿàΓÿàΓÿàΓÿàΓÿà</div>
                 <h3 class="text-4xl font-serif italic text-gradient">Freelance</h3>
                 <p class="text-[9px] tracking-[0.4em] text-gray-500 uppercase">Available for new project</p>
             </div>
@@ -296,7 +282,7 @@
 </section>
 
 
-<section id="about" class="relative py-24 md:py-40 bg-darkBg overflow-hidden border-t border-white/5">
+<section id="about" class="relative py-24 md:pt-40 md:pb-20 bg-darkBg overflow-hidden border-t border-white/5">
     <div class="absolute top-20 -right-20 pointer-events-none opacity-[0.03] select-none hidden md:block">
         <h2 class="font-luxury text-[20rem] leading-none text-white">PHP</h2>
     </div>
@@ -308,16 +294,16 @@
                 <h4 class="text-primary tracking-[0.5em] text-[10px] font-bold mb-6 uppercase">Brief Introduction</h4>
                 <h2 class="font-serif text-5xl md:text-7xl italic text-white leading-tight mb-8">
                     Passion for <br> 
-                    <span class="text-gradient">Clean Code.</span>
+                    <span class="text-gradient">Digital Growth & Efficiency.</span>
                 </h2>
                 
                 <div class="space-y-8">
                     <div class="flex gap-6 group">
                         <div class="text-primary font-serif italic text-2xl opacity-50 group-hover:opacity-100 transition">01.</div>
                         <div>
-                            <h5 class="text-white font-bold text-sm tracking-widest uppercase mb-2">Efficient Systems</h5>
+                            <h5 class="text-white font-bold text-sm tracking-widest uppercase mb-2">Sistem Rapi, Bisnis Tanpa Ribet</h5>
                             <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
-                                Membangun sistem manajemen data yang efisien, scalable, dan user-friendly berbasis web.
+                                Membantu Anda mengelola data bisnis secara otomatis, efisien, dan mudah digunakan—bahkan bagi yang gaptek sekalipun.
                             </p>
                         </div>
                     </div>
@@ -325,9 +311,9 @@
                     <div class="flex gap-6 group">
                         <div class="text-primary font-serif italic text-2xl opacity-50 group-hover:opacity-100 transition">02.</div>
                         <div>
-                            <h5 class="text-white font-bold text-sm tracking-widest uppercase mb-2">Secure Backend</h5>
+                            <h5 class="text-white font-bold text-sm tracking-widest uppercase mb-2">Aman & Terkendali</h5>
                             <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
-                                Terbiasa menangani autentikasi user, dashboard admin, dan integrasi database MySQL yang aman.
+                                Melindungi data penting perusahaan Anda dengan sistem login yang aman, dashboard terpusat, dan database yang terorganisir rapi.
                             </p>
                         </div>
                     </div>
@@ -377,151 +363,149 @@
                     <div class="w-full h-[1px] bg-white/10 mt-10"></div>
                 </div>
 
-                <div class="grid grid-cols-1 gap-24">
-                    
-                    <div class="group relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
-                        
-                        <div onclick="openModal('modal-lpk')" class="relative overflow-hidden rounded-2xl border border-white/10 aspect-video bg-cardBg cursor-pointer">
-                                <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
-                                
-                                <img src="assets/lpk/lpk-2.png" alt="LPK System" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                                
-                                <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
-                                </div>
-                        </div>
-                        <div class="space-y-6">
-                            <span class="text-primary font-bold text-[10px] tracking-[0.3em] uppercase">01 / Freelance Project</span>
-                            <h3 class="font-serif text-4xl text-white italic">Sistem Manajemen Siswa LPK</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                Mengembangkan ekosistem digital untuk LPK guna mengelola data peserta, *sending organization*, hingga proses interview dan monitoring penempatan secara real-time melalui dashboard analitik.
-                            </p>
-                            <ul class="grid grid-cols-2 gap-3 text-[11px] text-gray-500 font-medium italic">
-                                <li>• Multi-role Authentication</li>
-                                <li>• Real-time Analytics</li>
-                                <li>• Batch Grouping</li>
-                                <li>• Admin Dashboard</li>
-                            </ul>
-                            <div class="flex flex-wrap gap-2 pt-4">
-                                <span class="px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold text-primary bg-white/5 uppercase">Laravel</span>
-                                <span class="px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold text-primary bg-white/5 uppercase">MySQL</span>
-                                <!-- <span class="px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold text-primary bg-white/5 uppercase">Git</span> -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <a href="project-santravel.html" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-cardBg hover:border-primary/40 transition duration-500" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-square">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
+                            <img src="assets/santravel/santravel.png" alt="Santravel Travel Platform" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="group relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
-
-                        <div onclick="openModal('modal-inventori')" class="relative overflow-hidden rounded-2xl border border-white/10 aspect-video bg-cardBg cursor-pointer">
-                                <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
-                                
-                                <img src="assets/inventori/inv-2.png" alt="Inventori System" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                                
-                                <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
-                                </div>
-                        </div>
-
-                        <div class="order-2 md:order-1 space-y-6 md:text-right flex flex-col md:items-end">
-                            <span class="text-primary font-bold text-[10px] tracking-[0.3em] uppercase">02 / Freelance Project</span>
-                            <h3 class="font-serif text-4xl text-white italic">Sistem Persediaan Alat Kerja</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                Sistem manajemen aset terstruktur yang memisahkan barang habis pakai dan aset tetap. Dilengkapi fitur pelacakan nomor seri, riwayat peminjaman, serta manajemen multi-level user (Staf Gudang & Pemeliharaan).
-                            </p>
-                            <ul class="grid grid-cols-2 gap-3 text-[11px] text-gray-500 font-medium italic">
-                                <li>• Serial Number Tracking</li>
-                                <li>• Multi-level Auth</li>
-                                <li>• Stock Reporting</li>
-                                <li>• Asset Categorization</li>
-                            </ul>
-                            <div class="flex flex-wrap gap-2 pt-4 justify-end">
-                                <span class="px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold text-primary bg-white/5 uppercase">Laravel</span>
-                                <span class="px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold text-primary bg-white/5 uppercase">Bootstrap</span>
+                        <div class="p-6">
+                            <span class="text-primary font-bold text-[9px] tracking-[0.3em] uppercase">01 / Freelance Project</span>
+                            <h3 class="font-serif text-2xl text-white italic mb-2 mt-3 group-hover:text-primary transition">Santravel – Travel Platform</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Platform booking paket wisata dengan katalog destinasi, pemesanan, pembayaran, dan panel admin lengkap.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Laravel</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">MySQL</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Bootstrap</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="group relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
-                        <div class="relative overflow-hidden rounded-2xl border border-white/10 aspect-video bg-cardBg">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent opacity-20 group-hover:opacity-50 transition duration-700"></div>
-                            
-                            <div onclick="openModal('modal-klik-pangku')" class="relative overflow-hidden rounded-2xl border border-white/10 aspect-video bg-cardBg cursor-pointer">
-                                    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
-                                    
-                                    <img src="assets/klik-pangku/klik-pangku.png" alt="Aplikasi Pemesanan Makanan" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                                    
-                                    <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
-                                    </div>
-                            </div>
-
-                        </div>
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-3">
-                                <span class="text-primary font-bold text-[10px] tracking-[0.3em] uppercase">03 / College Project</span>
-                                <span class="px-2 py-0.5 rounded-sm bg-primary/20 text-primary text-[9px] font-bold">TOP RATED</span>
-                            </div>
-                            <h3 class="font-serif text-4xl text-white italic">KlikPangku – Food Ordering</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                Project prestisius yang mengintegrasikan <span class="text-white">Midtrans Payment Gateway</span>. Dibangun dengan stack modern untuk mendukung notifikasi real-time menggunakan Socket.io dan Redis untuk performa tinggi.
-                            </p>
-                            <div class="grid grid-cols-2 gap-4 border-y border-white/5 py-6">
-                                <div>
-                                    <p class="text-white text-[11px] font-bold uppercase mb-1">Payment</p>
-                                    <p class="text-gray-500 text-[10px]">Midtrans (E-wallet, CC, Transfer)</p>
-                                </div>
-                                <div>
-                                    <p class="text-white text-[11px] font-bold uppercase mb-1">Real-time</p>
-                                    <p class="text-gray-500 text-[10px]">Socket.io & Redis Integration</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="px-4 py-1.5 rounded-full border border-primary/30 text-[10px] font-bold text-primary bg-primary/5 uppercase">Redis</span>
-                                <span class="px-4 py-1.5 rounded-full border border-primary/30 text-[10px] font-bold text-primary bg-primary/5 uppercase">Socket.io</span>
-                                <span class="px-4 py-1.5 rounded-full border border-primary/30 text-[10px] font-bold text-primary bg-primary/5 uppercase">Midtrans</span>
+                    <a href="project-fitclan.html" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-cardBg hover:border-primary/40 transition duration-500" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-square">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
+                            <img src="assets/fitclan/fitclan.png" alt="FitClan Fitness Platform" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="group relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
-
-                        <div onclick="openModal('modal-pasaka')" class="relative overflow-hidden rounded-2xl border border-white/10 aspect-video bg-cardBg cursor-pointer">
-                                <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
-                                
-                                <img src="assets/pasaka/pasaka.png" alt="pasakarievansmith" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                                
-                                <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
-                                </div>
-                        </div>
-
-                        
-                        <div class="order-2 md:order-1 space-y-6 md:text-right flex flex-col md:items-end">
-                            <span class="text-primary font-bold text-[10px] tracking-[0.3em] uppercase">04 / Freelance Project</span>
-                            <h3 class="font-serif text-4xl text-white italic">Company Profile Pasaka Rievans & Smith</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                Website company profile profesional yang dikembangkan untuk merepresentasikan identitas 
-                                dan kredibilitas Pasaka Rievans & Smith sebagai firma hukum modern. Platform ini menampilkan 
-                                profil firma, tim advokat, layanan hukum, serta publikasi artikel legal dalam satu sistem 
-                                yang informatif, elegan, dan mudah diakses oleh calon klien.
-                            </p>
-                            <ul class="grid grid-cols-2 gap-3 text-[11px] text-gray-500 font-medium italic">
-                                <li>• Firm & Legal Team Profile</li>
-                                <li>• Legal Services Showcase</li>
-                                <li>• Legal Articles & Publications</li>
-                                <li>• Online Consultation & Contact Integration</li>
-                            </ul>
-                            <div class="flex flex-wrap gap-2 pt-4 justify-end">
-                                <span class="px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold text-primary bg-white/5 uppercase">Laravel</span>
-                                <span class="px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold text-primary bg-white/5 uppercase">Bootstrap</span>
-                                <span class="px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold text-primary bg-white/5 uppercase">MySQL</span>
+                        <div class="p-6">
+                            <span class="text-primary font-bold text-[9px] tracking-[0.3em] uppercase">02 / Personal Project</span>
+                            <h3 class="font-serif text-2xl text-white italic mb-2 mt-3 group-hover:text-primary transition">FitClan – Fitness Platform</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Manajemen pusat kebugaran: membership member, jadwal kelas, data trainer, dan pembayaran iuran terpadu.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Laravel</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">MySQL</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Bootstrap</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
+
+                    <a href="project-paduclothes.html" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-cardBg hover:border-primary/40 transition duration-500" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-square">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
+                            <img src="assets/paduclothes/paduclothes.png" alt="PaduClothes E-commerce" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary font-bold text-[9px] tracking-[0.3em] uppercase">03 / Personal Project</span>
+                            <h3 class="font-serif text-2xl text-white italic mb-2 mt-3 group-hover:text-primary transition">PaduClothes – E-commerce</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Toko online pakaian dengan katalog produk, keranjang, checkout, manajemen order, dan dashboard admin.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Laravel</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">MySQL</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Bootstrap</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-lpk.html" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-cardBg hover:border-primary/40 transition duration-500" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-square">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
+                            <img src="assets/lpk/lpk-2.png" alt="Sistem Manajemen Siswa LPK" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary font-bold text-[9px] tracking-[0.3em] uppercase">04 / Freelance Project</span>
+                            <h3 class="font-serif text-2xl text-white italic mb-2 mt-3 group-hover:text-primary transition">Sistem Manajemen Siswa LPK</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Manajemen siklus peserta LPK end-to-end: interview, batch grouping, penempatan, hingga dashboard analitik real-time.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Laravel</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">MySQL</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-inventori.html" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-cardBg hover:border-primary/40 transition duration-500" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-square">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
+                            <img src="assets/inventori/inv-2.png" alt="Sistem Persediaan Alat Kerja" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary font-bold text-[9px] tracking-[0.3em] uppercase">05 / Freelance Project</span>
+                            <h3 class="font-serif text-2xl text-white italic mb-2 mt-3 group-hover:text-primary transition">Sistem Persediaan Alat Kerja</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Manajemen aset dengan pelacakan nomor seri, peminjaman, dan laporan stok otomatis untuk multi-level user.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Laravel</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Bootstrap</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-pasaka.html" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-cardBg hover:border-primary/40 transition duration-500" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-square">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
+                            <img src="assets/pasaka/pasaka.png" alt="Company Profile Pasaka Rievans & Smith" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary font-bold text-[9px] tracking-[0.3em] uppercase">06 / Freelance Project</span>
+                            <h3 class="font-serif text-2xl text-white italic mb-2 mt-3 group-hover:text-primary transition">Company Profile Pasaka Rievans & Smith</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Website company profile firma hukum modern dengan profil tim, layanan, artikel legal, dan konsultasi online.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Laravel</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">Bootstrap</span>
+                                <span class="px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-primary bg-white/5 uppercase">MySQL</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-klikpangku.html" class="group relative overflow-hidden rounded-2xl border border-white/10 bg-cardBg hover:border-primary/40 transition duration-500" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-square">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-40 group-hover:opacity-100 transition duration-700 z-10"></div>
+                            <img src="assets/klik-pangku/klik-pangku.png" alt="KlikPangku Food Ordering" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <span class="absolute top-4 left-4 z-20 px-2 py-0.5 rounded-sm bg-primary/20 text-primary text-[9px] font-bold uppercase tracking-widest">Top Rated</span>
+                            <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="bg-primary text-darkBg px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">View Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary font-bold text-[9px] tracking-[0.3em] uppercase">07 / College Project</span>
+                            <h3 class="font-serif text-2xl text-white italic mb-2 mt-3 group-hover:text-primary transition">KlikPangku – Food Ordering</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Aplikasi pemesanan makanan dengan Midtrans Payment Gateway serta notifikasi real-time (Socket.io & Redis).</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-primary/30 text-[9px] font-bold text-primary bg-primary/5 uppercase">Redis</span>
+                                <span class="px-3 py-1 rounded-full border border-primary/30 text-[9px] font-bold text-primary bg-primary/5 uppercase">Socket.io</span>
+                                <span class="px-3 py-1 rounded-full border border-primary/30 text-[9px] font-bold text-primary bg-primary/5 uppercase">Midtrans</span>
+                            </div>
+                        </div>
+                    </a>
 
                 </div>
-            </div>
-        </section>
+            </div></section>
 
         <section id="contact" class="relative py-40 overflow-hidden bg-darkBg">
             <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -570,482 +554,6 @@
                 &copy; 2026 Samsul Bahri &mdash; Focused on Backend Excellence
             </p>
         </footer>
-
-        <!-- modal box -->
-        <!-- <div id="modal-lpk" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
-            <div class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <button onclick="closeModal('modal-lpk')" class="absolute top-5 right-5 z-[110] w-10 h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <div class="grid md:grid-cols-3">
-                    <div class="md:col-span-2 h-[300px] md:h-[500px] bg-black">
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="assets/lpk/lpk-3.png" class="w-full h-full object-cover" alt="lembaga pelatihan kerja"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/manajement-siswa.png" class="w-full h-full object-cover" alt="manajemen siswa"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/riwayat-interview.png" class="w-full h-full object-cover" alt="riwayat interview"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/form-penilaian.png" class="w-full h-full object-cover" alt="form penilaian"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/penempatan-siswa.png" class="w-full h-full object-cover" alt="penempatan siswa"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/add-persiapan-keberangkatan.png" class="w-full h-full object-cover" alt="keberangakatan jepang"></div>
-                                <div class="swiper-slide"><img src="assets/lpk/analitic.png" class="w-full h-full object-cover" alt="analitik"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-
-                    <div class="p-8 space-y-4">
-                        <h3 class="font-serif text-2xl italic text-white">Project Insights</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed">
-                            Platform manajemen berbasis web yang dirancang untuk membantu Lembaga Pelatihan Kerja (LPK) 
-                            dalam mengelola seluruh siklus data peserta, mulai dari pendaftaran, proses interview, 
-                            pengelompokan batch, hingga monitoring penempatan kerja. Sistem ini dilengkapi dashboard 
-                            analitik untuk menampilkan statistik dan insight secara real-time guna mendukung 
-                            pengambilan keputusan yang lebih efektif.
-                        </p>
-                        <div class="pt-4">
-                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">Key Features</p>
-                            <ul class="text-[11px] text-gray-300 space-y-2">
-                                <li>• Multi-role Authentication & Access Control</li>
-                                <li>• Student & Sending Organization Management</li>
-                                <li>• Interview Process Tracking</li>
-                                <li>• Batch Grouping & Placement Monitoring</li>
-                                <li>• Real-time Analytics Dashboard</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- modal box -->
-        <div id="modal-lpk" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto">
-
-            <div class="relative w-full max-w-5xl bg-cardBg rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-
-                <!-- CLOSE BUTTON -->
-                <button onclick="closeModal('modal-lpk')" 
-                    class="absolute top-3 right-3 md:top-5 md:right-5 z-[110] w-9 h-9 md:w-10 md:h-10 bg-darkBg/60 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <!-- GRID -->
-                <div class="grid grid-cols-1 md:grid-cols-3">
-
-                    <!-- IMAGE SLIDER -->
-                    <div class="md:col-span-2 h-[220px] sm:h-[260px] md:h-[500px] bg-black">
-
-                        <div class="swiper mySwiper h-full">
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide">
-                                    <img src="assets/lpk/lpk-3.png" class="w-full h-full object-cover" alt="lembaga pelatihan kerja">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/lpk/manajement-siswa.png" class="w-full h-full object-cover" alt="manajemen siswa">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/lpk/riwayat-interview.png" class="w-full h-full object-cover" alt="riwayat interview">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/lpk/form-penilaian.png" class="w-full h-full object-cover" alt="form penilaian">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/lpk/penempatan-siswa.png" class="w-full h-full object-cover" alt="penempatan siswa">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/lpk/add-persiapan-keberangkatan.png" class="w-full h-full object-cover" alt="keberangkatan jepang">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/lpk/analitic.png" class="w-full h-full object-cover" alt="analitik">
-                                </div>
-
-                            </div>
-
-                            <div class="swiper-button-next hidden md:flex"></div>
-                            <div class="swiper-button-prev hidden md:flex"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-
-                    </div>
-
-                    <!-- CONTENT -->
-                    <div class="p-5 md:p-8 space-y-4">
-
-                        <h3 class="font-serif text-xl md:text-2xl italic text-white">
-                            Project Insights
-                        </h3>
-
-                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">
-                            Platform manajemen berbasis web yang dirancang untuk membantu Lembaga Pelatihan Kerja (LPK) 
-                            dalam mengelola seluruh siklus data peserta, mulai dari pendaftaran, proses interview, 
-                            pengelompokan batch, hingga monitoring penempatan kerja. Sistem ini dilengkapi dashboard 
-                            analitik untuk menampilkan statistik dan insight secara real-time guna mendukung 
-                            pengambilan keputusan yang lebih efektif.
-                        </p>
-
-                        <div class="pt-4">
-                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">
-                                Key Features
-                            </p>
-
-                            <ul class="text-[11px] md:text-xs text-gray-300 space-y-2">
-                                <li>• Multi-role Authentication & Access Control</li>
-                                <li>• Student & Sending Organization Management</li>
-                                <li>• Interview Process Tracking</li>
-                                <li>• Batch Grouping & Placement Monitoring</li>
-                                <li>• Real-time Analytics Dashboard</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div id="modal-inventori" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto bg-black/60">
-
-            <div onclick="event.stopPropagation()" class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl max-h-[90vh]">
-
-                <!-- CLOSE BUTTON -->
-                <button onclick="closeModal('modal-inventori')" 
-                    class="absolute top-3 right-3 md:top-5 md:right-5 z-[110] w-9 h-9 md:w-10 md:h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <div class="grid grid-cols-1 md:grid-cols-3">
-
-                    <!-- SLIDER -->
-                    <div class="md:col-span-2 h-[220px] sm:h-[260px] md:h-[500px] bg-black">
-
-                        <div class="swiper mySwiper h-full">
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide">
-                                    <img src="assets/inventori/inv-1.png" class="w-full h-full object-cover" alt="inventori">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/inventori/3.png" class="w-full h-full object-cover" alt="inventori">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/inventori/4.png" class="w-full h-full object-cover" alt="inventori">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/inventori/1.png" class="w-full h-full object-cover" alt="inventori">
-                                </div>
-
-                            </div>
-
-                            <div class="swiper-button-next hidden md:flex"></div>
-                            <div class="swiper-button-prev hidden md:flex"></div>
-                            <div class="swiper-pagination"></div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- CONTENT -->
-                    <div class="p-5 md:p-8 space-y-4 overflow-y-auto">
-
-                        <h3 class="font-serif text-xl md:text-2xl italic text-white">
-                            Project Insights
-                        </h3>
-
-                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">
-                            Sistem informasi inventaris yang dirancang untuk mengelola persediaan alat kerja secara terstruktur dan efisien. 
-                            Aplikasi ini membantu tim dalam memantau stok, mengelola peminjaman, serta menghasilkan laporan persediaan 
-                            secara otomatis untuk mendukung pengelolaan aset yang lebih terorganisir.
-                        </p>
-
-                        <div class="pt-4">
-                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">
-                                Key Features
-                            </p>
-
-                            <ul class="text-[11px] md:text-xs text-gray-300 space-y-2">
-                                <li>• Serial Number Tracking for Asset Identification</li>
-                                <li>• Multi-level User Access (Warehouse & Maintenance Staff)</li>
-                                <li>• Inventory Stock Monitoring (Incoming & Outgoing Items)</li>
-                                <li>• Borrowing & Return Management System</li>
-                                <li>• Automated Stock Reporting (PDF / Excel)</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- <div id="modal-klik-pangku" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
-            <div class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <button onclick="closeModal('modal-klik-pangku')" class="absolute top-5 right-5 z-[110] w-10 h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <div class="grid md:grid-cols-3">
-                    <div class="md:col-span-2 h-[300px] md:h-[500px] bg-black">
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="assets/klik-pangku/2.png" class="w-full h-full object-cover" alt="aplikasi klik pangku"></div>
-                                <div class="swiper-slide"><img src="assets/klik-pangku/5.png" class="w-full h-full object-cover" alt="aplikasi klik pangku"></div>
-                                <div class="swiper-slide"><img src="assets/klik-pangku/4.png" class="w-full h-full object-cover" alt="aplikasi klik pangku"></div>
-                                <div class="swiper-slide"><img src="assets/klik-pangku/1.png" class="w-full h-full object-cover" alt="aplikasi klik pangku"></div>
-                                
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-
-                    <div class="p-8 space-y-4">
-                        <h3 class="font-serif text-2xl italic text-white">Project Insights</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed">
-                            Sistem pemesanan makanan berbasis web yang dirancang untuk memberikan pengalaman order yang cepat, praktis, dan modern. 
-                            Terintegrasi dengan payment gateway serta notifikasi real-time untuk mempercepat proses pemesanan hingga penyajian.
-                        </p>
-                        <div class="pt-4">
-                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">Key Features</p>
-                            <ul class="text-[11px] text-gray-300 space-y-2">
-                                <li>• Dynamic Food & Beverage Menu</li>
-                                <li>• Shopping Cart & Order Management</li>
-                                <li>• Midtrans Payment Gateway Integration</li>
-                                <li>• Real-time Order Notifications (Socket.io & Redis)</li>
-                                <li>• Admin Dashboard for Menu & Order Management</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <div id="modal-klik-pangku" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto bg-black/60">
-
-            <div onclick="event.stopPropagation()" class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl max-h-[90vh]">
-
-                <!-- CLOSE BUTTON -->
-                <button onclick="closeModal('modal-klik-pangku')" 
-                    class="absolute top-3 right-3 md:top-5 md:right-5 z-[110] w-9 h-9 md:w-10 md:h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <div class="grid grid-cols-1 md:grid-cols-3">
-
-                    <!-- SLIDER -->
-                    <div class="md:col-span-2 h-[220px] sm:h-[260px] md:h-[500px] bg-black">
-
-                        <div class="swiper mySwiper h-full">
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide">
-                                    <img src="assets/klik-pangku/2.png" class="w-full h-full object-cover" alt="aplikasi klik pangku">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/klik-pangku/5.png" class="w-full h-full object-cover" alt="aplikasi klik pangku">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/klik-pangku/4.png" class="w-full h-full object-cover" alt="aplikasi klik pangku">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/klik-pangku/1.png" class="w-full h-full object-cover" alt="aplikasi klik pangku">
-                                </div>
-
-                            </div>
-
-                            <div class="swiper-button-next hidden md:flex"></div>
-                            <div class="swiper-button-prev hidden md:flex"></div>
-                            <div class="swiper-pagination"></div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- CONTENT -->
-                    <div class="p-5 md:p-8 space-y-4 overflow-y-auto">
-
-                        <h3 class="font-serif text-xl md:text-2xl italic text-white">
-                            Project Insights
-                        </h3>
-
-                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">
-                            Sistem pemesanan makanan berbasis web yang dirancang untuk memberikan pengalaman order yang cepat, praktis, dan modern. 
-                            Terintegrasi dengan payment gateway serta notifikasi real-time untuk mempercepat proses pemesanan hingga penyajian.
-                        </p>
-
-                        <div class="pt-4">
-                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">
-                                Key Features
-                            </p>
-
-                            <ul class="text-[11px] md:text-xs text-gray-300 space-y-2">
-                                <li>• Dynamic Food & Beverage Menu</li>
-                                <li>• Shopping Cart & Order Management</li>
-                                <li>• Midtrans Payment Gateway Integration</li>
-                                <li>• Real-time Order Notifications (Socket.io & Redis)</li>
-                                <li>• Admin Dashboard for Menu & Order Management</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-        <div id="modal-pasaka" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto bg-black/60">
-
-            
-            <div onclick="event.stopPropagation()" class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl max-h-[90vh]">
-
-                <!-- CLOSE BUTTON -->
-                <button onclick="closeModal('modal-pasaka')" 
-                    class="absolute top-3 right-3 md:top-5 md:right-5 z-[110] w-9 h-9 md:w-10 md:h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <div class="grid grid-cols-1 md:grid-cols-3">
-
-                    <!-- SLIDER -->
-                    <div class="md:col-span-2 h-[220px] sm:h-[260px] md:h-[500px] bg-black">
-
-                        <div class="swiper mySwiper h-full">
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide">
-                                    <img src="assets/pasaka/pasaka-3.png" class="w-full h-full object-cover" alt="company profile">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/pasaka/pasaka-2.png" class="w-full h-full object-cover" alt="company profile">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="assets/pasaka/pasaka-1.png" class="w-full h-full object-cover" alt="company profile">
-                                </div>
-
-                            </div>
-
-                            <div class="swiper-button-next hidden md:flex"></div>
-                            <div class="swiper-button-prev hidden md:flex"></div>
-                            <div class="swiper-pagination"></div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- CONTENT -->
-                    <div class="p-5 md:p-8 space-y-4 overflow-y-auto">
-
-                        <h3 class="font-serif text-xl md:text-2xl italic text-white">
-                            Project Insights
-                        </h3>
-
-                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">
-                            Website company profile yang dirancang untuk memperkuat citra profesional 
-                            Pasaka Rievans & Smith sebagai firma hukum modern. Platform ini menyajikan 
-                            informasi tentang profil firma, tim advokat, layanan hukum, serta publikasi 
-                            artikel legal dalam tampilan yang elegan, responsif, dan mudah diakses oleh 
-                            calon klien. Sistem ini juga dilengkapi dengan panel admin untuk mengelola 
-                            konten secara dinamis serta fitur konsultasi online untuk mempermudah 
-                            komunikasi dengan klien.
-                        </p>
-
-                        <div class="pt-4">
-                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">
-                                Key Features
-                            </p>
-
-                            <ul class="text-[11px] md:text-xs text-gray-300 space-y-2">
-                                <li>• Professional Firm & Legal Team Profile</li>
-                                <li>• Admin Panel for Content & Team Management</li>
-                                <li>• Responsive & SEO-friendly Website Structure</li>
-                                <li>• Legal Services Showcase (Corporate Law, Litigation, Legal Audit)</li>
-                                <li>• Legal Articles & Publications Management</li>
-                                <li>• Online Consultation & Appointment Booking</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-            
-
-            </div>
-
-
-        <!-- <div id="modal-pasaka" class="modal-overlay fixed inset-0 z-[100] items-center justify-center p-4">
-            <div class="relative w-full max-w-5xl bg-cardBg rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <button onclick="closeModal('modal-pasaka')" class="absolute top-5 right-5 z-[110] w-10 h-10 bg-darkBg/50 text-white rounded-full flex items-center justify-center hover:bg-primary hover:text-darkBg transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <div class="grid md:grid-cols-3">
-                    <div class="md:col-span-2 h-[300px] md:h-[500px] bg-black">
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="assets/pasaka/pasaka-3.png" class="w-full h-full object-cover" alt="company profile"></div>
-                                <div class="swiper-slide"><img src="assets/pasaka/pasaka-2.png" class="w-full h-full object-cover" alt="company profile"></div>
-                                <div class="swiper-slide"><img src="assets/pasaka/pasaka-1.png" class="w-full h-full object-cover" alt="company profile"></div>
-                                
-                                
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-
-                    <div class="p-8 space-y-4">
-                        <h3 class="font-serif text-2xl italic text-white">Project Insights</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed">
-                            Website company profile yang dirancang untuk memperkuat citra profesional 
-                            Pasaka Rievans & Smith sebagai firma hukum modern. Platform ini menyajikan 
-                            informasi tentang profil firma, tim advokat, layanan hukum, serta publikasi 
-                            artikel legal dalam tampilan yang elegan, responsif, dan mudah diakses oleh 
-                            calon klien. Sistem ini juga dilengkapi dengan panel admin untuk mengelola 
-                            konten secara dinamis serta fitur konsultasi online untuk mempermudah 
-                            komunikasi dengan klien.
-                        </p>
-                        <div class="pt-4">
-                            <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">Key Features</p>
-                            <ul class="text-[11px] text-gray-300 space-y-2">
-                                <li>• Professional Firm & Legal Team Profile</li>
-                                <li>• Legal Services Showcase (Corporate Law, Litigation, Legal Audit)</li>
-                                <li>• Legal Articles & Publications Management</li>
-                                <li>• Online Consultation & Appointment Booking</li>
-                                <li>• Admin Panel for Content & Team Management</li>
-                                <li>• Responsive & SEO-friendly Website Structure</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-        </div> -->
 
         <a href="https://wa.me/6285714416493?text=Halo%20Samsul,%20saya%20ingin%20berkonsultasi%20mengenai%20project%20web" 
             target="_blank" 
@@ -1109,38 +617,9 @@
         });
     </script>
 
-    <script>
-        // Inisialisasi Swiper
-        const swiper = new Swiper(".mySwiper", {
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            loop: true,
-        });
-
-        // Fungsi Open/Close Modal
-        function openModal(id) {
-            document.getElementById(id).classList.add('modal-active');
-            document.body.style.overflow = 'hidden'; // Stop scrolling
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).classList.remove('modal-active');
-            document.body.style.overflow = 'auto'; // Enable scrolling
-        }
-
-        // Close modal when clicking outside the box
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal-overlay')) {
-                event.target.classList.remove('modal-active');
-                document.body.style.overflow = 'auto';
-            }
-        }
-    </script>
+    
 </body>
 </html>
+
+
+

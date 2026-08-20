@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistem Manajemen Siswa LPK - Samsul Bahri. Platform manajemen berbasis web untuk Lembaga Pelatihan Kerja.">
+    <meta name="author" content="Samsul Bahri">
+
+    <title>Sistem Manajemen Siswa LPK | Samsul Bahri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2DD4BF',
+                        darkBg: '#0F172A',
+                        cardBg: '#1E293B',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0F172A; color: white; overflow-x: hidden; font-family: 'Inter', sans-serif; cursor: none; }
+        html { scroll-behavior: smooth; }
+        @media (min-width: 768px) { body { cursor: none; } }
+        section { scroll-margin-top: 100px; }
+        #cursor { width: 20px; height: 20px; background: #2DD4BF; border-radius: 50%;
+            position: fixed; pointer-events: none; z-index: 999; mix-blend-mode: difference;
+            transition: transform 0.1s ease-out; }
+        .noise { position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05; pointer-events: none; z-index: 100; }
+        .text-gradient { background: linear-gradient(to right, #2DD4BF, #94FBED);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-pill { background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 999px; }
+        .swiper { width: 100%; height: 100%; border-radius: 12px; }
+        .swiper-button-next, .swiper-button-prev { color: #2DD4BF !important; }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; z-index: 99;
+            display: flex; align-items: center; gap: 12px; padding: 12px 18px;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(15px);
+            border: 1px solid rgba(45, 212, 191, 0.3); border-radius: 999px;
+            color: white; text-decoration: none;
+            box-shadow: 0 10px 40px rgba(45, 212, 191, 0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .wa-float:hover { transform: translateY(-8px) scale(1.05); background: #2DD4BF;
+            color: #0F172A; box-shadow: 0 15px 50px rgba(45, 212, 191, 0.5); border-color: #2DD4BF; }
+        .wa-icon { font-size: 24px; }
+        .wa-text { font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; }
+        .text-outline { color: transparent; -webkit-text-stroke: 1.5px rgba(82, 251, 228, 0.15); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="cursor"></div>
+    <div class="noise"></div>
+
+    <header class="fixed w-full top-8 z-50 px-4">
+        <nav class="container mx-auto max-w-5xl nav-pill py-3 px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="font-serif italic text-2xl text-primary">S.</span>
+                <span class="font-semibold tracking-[0.3em] text-[10px] opacity-80">BAHRI</span>
+            </a>
+            <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.2em]">
+                <a href="index.html#about" class="hover:text-primary transition">About</a>
+                <a href="index.html#works" class="hover:text-primary transition">Works</a>
+            </div>
+            <a href="index.html#works" class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-primary hover:text-white transition">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+        </nav>
+    </header>
+
+    <section class="relative pt-40 md:pt-52 pb-20 overflow-hidden bg-darkBg">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-primary font-bold text-[10px] tracking-[0.3em] uppercase">04 / Freelance Project</span>
+                    </div>
+                    <h1 class="font-serif italic text-5xl md:text-7xl text-white leading-tight mb-8">
+                        Sistem Manajemen <br><span class="text-gradient">Siswa LPK</span>
+                    </h1>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8 max-w-xl">
+                        Platform manajemen berbasis web untuk Lembaga Pelatihan Kerja dalam mengelola
+                        seluruh siklus data peserta, mulai dari pendaftaran, proses interview,
+                        pengelompokan batch, hingga monitoring penempatan kerja secara real-time.
+                    </p>
+                    <div class="mb-6 text-gray-400 text-[10px] uppercase tracking-[0.3em]">Website
+                        <a href="https://simtaraj.my.id" target="_blank" class="text-primary hover:underline">https://simtaraj.my.id</a>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-10">
+                        <span class="px-4 py-1.5 rounded-full border border-primary/30 text-[10px] font-bold text-primary bg-primary/5 uppercase">Laravel</span>
+                        <span class="px-4 py-1.5 rounded-full border border-primary/30 text-[10px] font-bold text-primary bg-primary/5 uppercase">MySQL</span>
+                        <span class="px-4 py-1.5 rounded-full border border-primary/30 text-[10px] font-bold text-primary bg-primary/5 uppercase">Bootstrap</span>
+                    </div>
+                    <a href="https://wa.me/6285714416493?text=Halo%20Samsul,%20saya%20ingin%20melihat%20demo%20project%20LPK"
+                       target="_blank"
+                       class="inline-flex items-center gap-3 bg-primary text-darkBg px-7 py-3.5 rounded-full font-bold text-[10px] tracking-widest hover:bg-white transition duration-300 shadow-xl">
+                        REQUEST DEMO <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="relative" data-aos="fade-left">
+                    <div class="bg-cardBg/40 backdrop-blur-xl border border-white/5 p-3 rounded-3xl">
+                        <img src="assets/lpk/lpk-2.png" alt="Sistem Manajemen Siswa LPK" class="w-full h-auto rounded-2xl object-cover shadow-2xl">
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-24 bg-darkBg border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16" data-aos="fade-up">
+                <h4 class="text-primary tracking-[0.5em] text-[10px] font-bold mb-4 uppercase">Gallery</h4>
+                <h2 class="font-serif text-4xl md:text-6xl italic text-white">Project <span class="text-gradient">Preview</span></h2>
+            </div>
+
+            <div class="relative h-[260px] sm:h-[400px] md:h-[560px] bg-black rounded-3xl border border-white/10 overflow-hidden" data-aos="zoom-in">
+                <div class="swiper mySwiper h-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/lpk/lpk-3.png" class="w-full h-full object-cover" alt="LPK Dashboard"></div>
+                        <div class="swiper-slide"><img src="assets/lpk/manajement-siswa.png" class="w-full h-full object-cover" alt="Manajemen Siswa"></div>
+                        <div class="swiper-slide"><img src="assets/lpk/riwayat-interview.png" class="w-full h-full object-cover" alt="Riwayat Interview"></div>
+                        <div class="swiper-slide"><img src="assets/lpk/form-penilaian.png" class="w-full h-full object-cover" alt="Form Penilaian"></div>
+                        <div class="swiper-slide"><img src="assets/lpk/penempatan-siswa.png" class="w-full h-full object-cover" alt="Penempatan Siswa"></div>
+                        <div class="swiper-slide"><img src="assets/lpk/add-persiapan-keberangkatan.png" class="w-full h-full object-cover" alt="Persiapan Keberangkatan"></div>
+                        <div class="swiper-slide"><img src="assets/lpk/analitic.png" class="w-full h-full object-cover" alt="Analitik"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-24 bg-darkBg">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div data-aos="fade-right">
+                    <h4 class="text-primary tracking-[0.5em] text-[10px] font-bold mb-4 uppercase">Overview</h4>
+                    <h2 class="font-serif text-4xl md:text-5xl italic text-white leading-tight mb-8">
+                        Mengelola siklus peserta <span class="text-gradient">end-to-end</span>
+                    </h2>
+                    <div class="space-y-6 text-gray-400 text-sm leading-relaxed">
+                        <p>
+                            Sistem ini dirancang untuk membantu Lembaga Pelatihan Kerja dalam mengelola
+                            seluruh alur data peserta secara digital — dari pendaftaran awal, proses interview,
+                            pengelompokan batch, hingga monitoring penempatan kerja di luar negeri.
+                        </p>
+                        <p>
+                            Dilengkapi dashboard analitik yang menyajikan statistik dan insight secara real-time,
+                            sehingga pengambilan keputusan menjadi lebih cepat, akurat, dan berbasis data.
+                            Arsitektur multi-role memastikan setiap pengguna hanya mengakses data sesuai wewenangnya.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-10">
+                        <div class="border border-white/10 p-4 rounded-xl hover:border-primary/50 transition duration-500">
+                            <p class="text-primary text-2xl font-serif italic mb-1">7+</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Modul Sistem</p>
+                        </div>
+                        <div class="border border-white/10 p-4 rounded-xl hover:border-primary/50 transition duration-500">
+                            <p class="text-primary text-2xl font-serif italic mb-1">100%</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Digital Workflow</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h4 class="text-primary tracking-[0.5em] text-[10px] font-bold mb-6 uppercase">Key Features</h4>
+                    <div class="space-y-4">
+                        <div class="group flex gap-5 p-5 bg-cardBg/40 border border-white/5 rounded-2xl hover:border-primary/40 transition duration-500">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center text-primary"><i class="fa-solid fa-user-shield"></i></div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm mb-1">Multi-role Authentication</h5>
+                                <p class="text-gray-400 text-xs leading-relaxed">Akses kontrol berbasis peran untuk admin, staff, dan stakeholder.</p>
+                            </div>
+                        </div>
+                        <div class="group flex gap-5 p-5 bg-cardBg/40 border border-white/5 rounded-2xl hover:border-primary/40 transition duration-500">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center text-primary"><i class="fa-solid fa-users-gear"></i></div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm mb-1">Student & Sending Organization</h5>
+                                <p class="text-gray-400 text-xs leading-relaxed">Manajemen data peserta dan lembaga pengirim secara terpadu.</p>
+                            </div>
+                        </div>
+                        <div class="group flex gap-5 p-5 bg-cardBg/40 border border-white/5 rounded-2xl hover:border-primary/40 transition duration-500">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center text-primary"><i class="fa-solid fa-list-check"></i></div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm mb-1">Interview Process Tracking</h5>
+                                <p class="text-gray-400 text-xs leading-relaxed">Monitoring progres interview peserta per tahapan.</p>
+                            </div>
+                        </div>
+                        <div class="group flex gap-5 p-5 bg-cardBg/40 border border-white/5 rounded-2xl hover:border-primary/40 transition duration-500">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center text-primary"><i class="fa-solid fa-layer-group"></i></div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm mb-1">Batch Grouping & Placement</h5>
+                                <p class="text-gray-400 text-xs leading-relaxed">Pengelompokan batch dan monitoring penempatan kerja.</p>
+                            </div>
+                        </div>
+                        <div class="group flex gap-5 p-5 bg-cardBg/40 border border-white/5 rounded-2xl hover:border-primary/40 transition duration-500">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center text-primary"><i class="fa-solid fa-chart-line"></i></div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm mb-1">Real-time Analytics Dashboard</h5>
+                                <p class="text-gray-400 text-xs leading-relaxed">Statistik dan insight untuk mendukung keputusan efektif.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-24 bg-darkBg border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16" data-aos="fade-up">
+                <h4 class="text-primary tracking-[0.5em] text-[10px] font-bold mb-4 uppercase">Tech Stack</h4>
+                <h2 class="font-serif text-4xl md:text-6xl italic text-white">Teknologi yang <span class="text-gradient">Digunakan</span></h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+                <div class="p-6 bg-cardBg/40 border border-white/5 rounded-2xl text-center hover:border-primary/40 transition duration-500">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center text-primary text-xl"><i class="fa-brands fa-laravel"></i></div>
+                    <p class="text-white font-bold text-sm mb-1">Laravel</p>
+                    <p class="text-gray-500 text-[10px] uppercase tracking-widest">Backend</p>
+                </div>
+                <div class="p-6 bg-cardBg/40 border border-white/5 rounded-2xl text-center hover:border-primary/40 transition duration-500">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center text-primary text-xl"><i class="fa-solid fa-database"></i></div>
+                    <p class="text-white font-bold text-sm mb-1">MySQL</p>
+                    <p class="text-gray-500 text-[10px] uppercase tracking-widest">Database</p>
+                </div>
+                <div class="p-6 bg-cardBg/40 border border-white/5 rounded-2xl text-center hover:border-primary/40 transition duration-500">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center text-primary text-xl"><i class="fa-brands fa-bootstrap"></i></div>
+                    <p class="text-white font-bold text-sm mb-1">Bootstrap</p>
+                    <p class="text-gray-500 text-[10px] uppercase tracking-widest">Frontend</p>
+                </div>
+                <div class="p-6 bg-cardBg/40 border border-white/5 rounded-2xl text-center hover:border-primary/40 transition duration-500">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center text-primary text-xl"><i class="fa-solid fa-shield-halved"></i></div>
+                    <p class="text-white font-bold text-sm mb-1">Laravel Auth</p>
+                    <p class="text-gray-500 text-[10px] uppercase tracking-widest">Security</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-24 overflow-hidden bg-darkBg">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-10" data-aos="fade-up">
+                <div class="flex items-center gap-6">
+                    <a href="project-paduclothes.html" class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-darkBg transition-all duration-300">
+                        <i class="fa-solid fa-arrow-left text-lg"></i>
+                    </a>
+                    <div>
+                        <p class="text-[10px] tracking-[0.3em] text-gray-500 uppercase mb-1">Previous</p>
+                        <p class="font-serif italic text-xl text-white">PaduClothes – E-commerce</p>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-[10px] tracking-[0.3em] text-gray-500 uppercase mb-1">Suka project ini?</p>
+                    <h3 class="font-serif italic text-3xl md:text-4xl text-white mb-4">Let's build yours.</h3>
+                    <a href="https://wa.me/6285714416493?text=Halo%20Samsul,%20saya%20tertarik%20membangun%20project%20serupa"
+                       target="_blank"
+                       class="inline-flex items-center gap-3 bg-primary text-darkBg px-7 py-3.5 rounded-full font-bold text-[10px] tracking-widest hover:bg-white transition duration-300 shadow-xl">
+                        HIRE ME <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <div class="text-right">
+                        <p class="text-[10px] tracking-[0.3em] text-gray-500 uppercase mb-1">Next</p>
+                        <p class="font-serif italic text-xl text-white">Sistem Persediaan Alat Kerja</p>
+                    </div>
+                    <a href="project-inventori.html" class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-darkBg transition-all duration-300">
+                        <i class="fa-solid fa-arrow-right text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-darkBg text-center border-t border-white/5">
+        <p class="text-[9px] tracking-[0.5em] text-gray-600 uppercase">
+            &copy; 2026 Samsul Bahri &mdash; Focused on Backend Excellence
+        </p>
+    </footer>
+
+    <a href="https://wa.me/6285714416493?text=Halo%20Samsul,%20saya%20ingin%20berkonsultasi%20mengenai%20project%20web"
+       target="_blank" class="wa-float group" data-aos="fade-left" data-aos-delay="1000">
+        <div class="wa-text hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500">Let's Talk</div>
+        <div class="flex items-center justify-center"><i class="fa-brands fa-whatsapp wa-icon"></i></div>
+        <span class="absolute -top-1 -right-1 flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+        </span>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
+    <script>
+        new Swiper(".mySwiper", {
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+        });
+    </script>
+</body>
+</html>
